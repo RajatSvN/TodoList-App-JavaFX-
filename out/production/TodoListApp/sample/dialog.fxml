@@ -1,0 +1,16 @@
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Button?>
+<GridPane fx:controller="sample.DialogController"
+          xmlns:fx="http://javafx.com/fxml" hgap="10" vgap="10" alignment="CENTER">
+            <Label text="Short Description" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+            <TextField  fx:id="title" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Description" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+            <TextArea fx:id="description" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+            <Label text="DeadLine" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <DatePicker fx:id="deadline" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Button GridPane.rowIndex="4" fx:id="closer" GridPane.columnIndex="1" text="Add" onAction="#passValue"/>
+</GridPane>

@@ -1,0 +1,28 @@
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<BorderPane fx:id="mainBorderPane" fx:controller="sample.Controller"
+            xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox spacing="10" alignment="CENTER">
+            <Button fx:id="focusget" text="Home / All Todo's" onAction="#Home"/>
+            <Button text="Today's Todo's" onAction="#Today"/>
+            <Button text="Expired Todo's" onAction="#Expired"/>
+            <Button text="Add New" onAction="#openDialog"/>
+        </HBox>
+    </top>
+    <left>
+        <ListView fx:id="leftListView" onMouseClicked="#showDescription"/>
+    </left>
+    <center>
+        <TextArea fx:id="descriptionArea" style="-fx-font-size: 14;"/>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER">
+        <Label fx:id="dueDateLabel" style="-fx-font-weight : bold; -fx-font-size : 20;"/>
+        </HBox>
+    </bottom>
+</BorderPane>
